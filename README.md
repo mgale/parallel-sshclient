@@ -1,6 +1,6 @@
 # parallel-sshclient
 
-parallel-sshclient is designed to execute commands in parallel on a remote hosts.
+parallel-sshclient is designed to execute commands in parallel on remote hosts.
 
 It provides the time taken to execute the command, the exit status and saves the output to /tmp/ for
 later analysis.
@@ -8,8 +8,8 @@ later analysis.
 Reasons behind creating parallel-sshlcient
 * I am learning golang and needed something to build.
 * I execute alot of ad-hoc commands against servers and usually end up running a bash for loop on
-the command line. This can be slow as the server count increases. I did look into other solutions 
-but like Ansible and parallel-ssh but decided to experiment with golang instead.
+the command line. This can be slow as the server count increases. I did look into other solutions
+like Ansible and parallel-ssh but decided to experiment with golang instead.
 ---
 
 
