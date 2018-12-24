@@ -10,6 +10,15 @@ Reasons behind creating parallel-sshlcient
 * I execute alot of ad-hoc commands against servers and usually end up running a bash for loop on
 the command line. This can be slow as the server count increases. I did look into other solutions
 like Ansible and parallel-ssh but decided to experiment with golang instead.
+
+In the end I replaced this:
+```
+for s in `cat /tmp/production-host.list`; do echo ${s} ; user@${s} 'service <service-name> status'; done
+```
+with
+```
+./parallel-sshclient -hosts-file /tmp/production-host.list --remote-cmd "service <service-name> status" -curmax 50
+```
 ---
 
 
